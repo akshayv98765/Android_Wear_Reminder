@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">ReminderWise</string>
+    <string name="select_repetition_option">Select Repetition Option</string>
+    <string-array name="repetition_options">
+        <item>Select Repetition Option</item>
+        <item>Once</item>
+        <item>Hourly</item>
+        <item>Daily</item>
+        <item>Weekly</item>
+        <item>Monthly</item>
+        <item>Yearly</item>
+    </string-array>
+</resources>

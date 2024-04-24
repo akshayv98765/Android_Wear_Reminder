@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.reminderwise">
+
+    <uses-feature android:name="android.hardware.type.watch" /> <!-- Permissions -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".activity.SettingsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.UpdateReminderActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.ListRemindersActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.AddReminderActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.MainActivity"
+            android:exported="true"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity> <!-- Worker for Background Task -->
+        <service
+            android:name=".worker.ReminderNotificationWorker"
+            android:exported="false"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            tools:ignore="Instantiatable" />
+    </application>
+
+</manifest>

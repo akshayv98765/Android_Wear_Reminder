@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.wear.widget.BoxInsetLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.SettingsActivity"
+    android:padding="2dp"
+    tools:ignore="MissingClass">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:padding="2dp"
+        app:layout_boxedEdges="all">
+
+        <!-- Theme Switch -->
+        <Switch
+            android:id="@+id/themeSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:text="Dark Theme"
+            android:layout_gravity="center"
+            android:layout_marginTop="1dp"
+            tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+        <!-- Rate the App RatingBar -->
+        <RatingBar
+            android:id="@+id/appRatingBar"
+            android:layout_width="240dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="2dp"
+            android:numStars="5"
+            android:stepSize="1"
+            android:scaleX="0.4"
+            android:scaleY="0.3"
+            android:padding="0dp"/>
+
+        <!-- Submit Rating Button -->
+        <Button
+            android:id="@+id/submitRatingButton"
+            android:layout_width="wrap_content"
+            android:layout_height="18dp"
+            android:textSize="8sp"
+            android:text="Rate App"
+            android:onClick="openSettingsScreen"
+            android:layout_gravity="center"
+            android:layout_marginTop="0dp"
+            android:textColor="@color/white"
+            android:background="@drawable/rounded_buttons"
+            android:enabled="false"
+            tools:ignore="OnClick"
+            android:padding="0dp"/>
+
+        <!-- App Info TextView -->
+        <TextView
+            android:id="@+id/appInfoTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="6sp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_marginTop="1dp"
+            tools:text="App Name: Reminder Wise (v1.0.0)\nDevelopers:\nJoykeneth gamit\nNavpreet Navpreet"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+</androidx.wear.widget.BoxInsetLayout>

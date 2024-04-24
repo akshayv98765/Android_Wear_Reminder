@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.wear.widget.BoxInsetLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.UpdateReminderActivity"
+    android:padding="2dp"
+    tools:ignore="MissingClass">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:padding="1dp"
+        app:layout_boxedEdges="all">
+
+        <!-- Reminder Name -->
+        <EditText
+            android:id="@+id/editTextReminderName"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:textSize="12sp"
+            android:background="@drawable/bordered_text_box"
+            android:imeOptions="actionSend"
+            android:textColorHint="@color/black"
+            android:hint="Reminder Name"
+            android:inputType="text"
+            android:layout_marginTop="1dp"/>
+
+        <!-- Reminder Description -->
+        <EditText
+            android:id="@+id/editTextReminderDescription"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:textSize="12sp"
+            android:background="@drawable/bordered_text_box"
+            android:imeOptions="actionSend"
+            android:textColorHint="@color/black"
+            android:hint="Description"
+            android:layout_marginTop="1dp"
+            android:inputType="textMultiLine"/>
+
+        <!-- Date and Time Picker for Reminder -->
+        <EditText
+            android:id="@+id/editTextDueDateTime"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:textSize="10sp"
+            android:background="@drawable/bordered_text_box"
+            android:imeOptions="actionSend"
+            android:textColorHint="@color/black"
+            android:hint=""
+            android:inputType="datetime"
+            android:layout_marginTop="1dp"
+            android:focusable="false"
+            android:onClick="showDateTimePicker"
+            tools:ignore="OnClick"/>
+
+        <!-- Repeat Options -->
+        <Spinner
+            android:id="@+id/spinnerRepetition"
+            android:layout_width="match_parent"
+            android:layout_height="22dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:textSize="10sp"
+            android:layout_marginTop="1dp"
+            android:textColorHint="@color/black"
+            android:background="@drawable/bordered_text_box"
+            android:imeOptions="actionSend"
+            android:entries="@array/repetition_options"
+            android:prompt="@string/select_repetition_option"/>
+
+        <!-- Buttons to Update and Delete Reminder -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="2dp">
+
+            <Button
+                android:id="@+id/buttonUpdateReminder"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:text="Update"
+                android:textSize="12sp"
+                android:textAllCaps="false"
+                android:padding="1dp"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:background="@drawable/rounded_buttons"
+                android:onClick="onUpdateReminderButtonClick"
+                tools:ignore="OnClick"/>
+
+            <Button
+                android:id="@+id/buttonDeleteReminder"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:text="Delete"
+                android:textSize="12sp"
+                android:textAllCaps="false"
+                android:padding="1dp"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:background="@drawable/rounded_buttons"
+                android:onClick="onDeleteReminderButtonClick"
+                tools:ignore="OnClick"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.wear.widget.BoxInsetLayout>

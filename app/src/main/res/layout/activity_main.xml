@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.wear.widget.BoxInsetLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.MainActivity"
+    android:padding="2dp"
+    tools:ignore="MissingClass">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:padding="1dp"
+        app:layout_boxedEdges="all">
+
+        <!-- App Name TextView -->
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:background="@color/grey"
+            android:text="Reminder Wise"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:padding="2dp"/>
+
+        <!-- Add Reminder Button -->
+        <Button
+            android:id="@+id/buttonAddReminder"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:textSize="8sp"
+            android:text="Add New Reminder"
+            android:layout_gravity="center"
+            android:layout_marginTop="2dp"
+            android:textColor="@color/white"
+            android:background="@drawable/rounded_buttons"/>
+
+        <!-- List Reminders Button -->
+        <Button
+            android:id="@+id/buttonListReminders"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:textSize="8sp"
+            android:text="Edit/Delete Reminders"
+            android:layout_gravity="center"
+            android:layout_marginTop="2dp"
+            android:textColor="@color/white"
+            android:background="@drawable/rounded_buttons"/>
+
+        <!-- Settings Button -->
+        <Button
+            android:id="@+id/buttonSettings"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:textSize="8sp"
+            android:text="Settings"
+            android:layout_gravity="center"
+            android:layout_marginTop="2dp"
+            android:textColor="@color/white"
+            android:background="@drawable/rounded_buttons"/>
+
+    </LinearLayout>
+</androidx.wear.widget.BoxInsetLayout>
